@@ -1,0 +1,23 @@
+<%= link_to "All Movies", root_path %>
+
+<article class="">
+  <header>
+    <h1> <%= @movie.title %> </h1>
+  </header>
+  <h2>Description</h2>
+    <p>
+      <%= @movie.description %>
+    </p>
+    <h3>Released On:</h3>
+    <p>
+      <%= time_ago_in_words(@movie.released_on) %> ago
+    </p>
+    <h3>Rating:</h3>
+    <p>
+      <%= @movie.rating %>
+    </p>
+    <h3>Total Gross:</h3>
+    <p>
+      <%= format_total_gross(@movie) %>
+    </p>
+</article>
